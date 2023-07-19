@@ -1,0 +1,203 @@
+// Paleta de colores
+$primary-color: #001c30;
+$secondary-color: #176b87;
+$tertiary-color: #64ccc5;
+$quaternary-color: #dafffb;
+
+// Estilos generales del documento
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: $tertiary-color;
+}
+
+// Contenedor principal para la página
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+// Contenedor para los pasos del formulario
+.form-step-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 800px;
+  padding: 20px;
+}
+
+.form-step {
+  display: none;
+  &.active {
+    display: flex;
+  }
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  background-color: $quaternary-color;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+// Animaciones para mostrar y ocultar los pasos del formulario
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.form-step.active ~ .form-step {
+  animation: fadeOut 0.5s ease-in-out;
+}
+
+// Estilos para los títulos de los pasos del formulario
+.form-step h2 {
+  margin-bottom: 20px;
+}
+
+// Estilos para etiquetas de los campos del formulario
+.form-step label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+// Estilos para campos de entrada y select en el formulario
+.form-step input,
+.form-step select {
+  padding: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form-step select {
+  appearance: none;
+  background-color: #fff;
+}
+
+// Estilos para botones en el formulario
+.form-step button {
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: $primary-color;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.form-step button:hover {
+  background-color: $tertiary-color;
+}
+
+.form-step.active ~ .form-step button {
+  display: none;
+}
+
+// Estilos para el grupo de botones en el formulario
+.button-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.button-group button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: $primary-color;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.button-group button:last-child {
+  background-color: $secondary-color;
+}
+
+.button-group button:hover {
+  background-color: $tertiary-color;
+}
+
+// Estilos para el contenedor de resumen en el paso 4
+.resumen-container {
+  grid-column: 2;
+  grid-row: 1 / span 4;
+  padding: 20px;
+  background-color: $secondary-color;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.resumen-container h2 {
+  margin-bottom: 10px;
+}
+
+.resumen-container p {
+  margin-bottom: 5px;
+}
+
+// Estilos para el botón de envío en el paso 4
+.submit-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: $primary-color;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 10px;
+  margin-left: 150px;
+}
+
+.submit-button:hover {
+  background-color: $tertiary-color;
+}
+
+// Estilos para pantallas más pequeñas (tablets y smartphones)
+@media screen and (max-width: 768px) {
+  .form-step-container {
+    grid-template-columns: 1fr;
+  }
+
+  .form-step {
+    padding: 20px;
+  }
+
+  .resumen-container {
+    grid-column: 1;
+    grid-row: auto;
+    margin-bottom: 20px;
+  }
+
+  .submit-button {
+    margin-left: 0;
+  }
+}
+
+// Estilos para pantallas más grandes (desktops y laptops)
+@media screen and (min-width: 769px) {
+  .form-step-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
