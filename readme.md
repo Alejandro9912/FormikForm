@@ -34,16 +34,19 @@ Para acceder al directorio de la app, ejecuta el siguiente comando en tu termina
 ```bash
 cd RutaCompleta/my-form-app
 ```
-### Instalar las dependencias yarn
+### Instalar las dependencias con Yarn
 
 ```bash
 yarn 
 ```
 
-En consola ejecutamos el comando yarn, si no se tiene yarn debemos instalarlo desde la pagina (https://yarnpkg.com/).
+Si aún no tienes Yarn instalado en tu sistema, puedes descargarlo desde la página oficial (https://yarnpkg.com/).
 
 ### Correr la app
+Finalmente, para iniciar la aplicación y verla en tu navegador, ejecuta el siguiente comando:
 
 ```bash
 yarn dev
 ```
+
+Esto iniciará el servidor de desarrollo y la aplicación estará disponible en http://localhost:3000 por defecto.
