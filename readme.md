@@ -44,4 +44,6 @@ En consola ejecutamos el comando yarn, si no se tiene yarn debemos instalarlo de
 
 ### Correr la app
 
+```bash
 yarn dev
+```
