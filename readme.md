@@ -33,7 +33,7 @@ Para acceder al directorio de la app, ejecuta el siguiente comando en tu termina
 
 ```bash
 cd RutaCompleta/my-form-app
-
+```
 ### Instalar las dependencias yarn
 
 yarn  `Este comando instala las dependencias`
