@@ -27,9 +27,12 @@ Se requiere que la interfaz gráfica sea sencilla y agradable para el usuario. P
 
 ## Ejecucion
 
-### Acceder al directorio de la app
+### Acceder al directorio de la App
 
-Se debe acceder a la ubicacion del directorio de la app cd `Ruta completa`/my-form-app
+Para acceder al directorio de la app, ejecuta el siguiente comando en tu terminal:
+
+```bash
+cd RutaCompleta/my-form-app
 
 ### Instalar las dependencias yarn
 
