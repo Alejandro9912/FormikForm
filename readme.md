@@ -36,7 +36,9 @@ cd RutaCompleta/my-form-app
 ```
 ### Instalar las dependencias yarn
 
-yarn  `Este comando instala las dependencias`
+```bash
+yarn 
+```
 
 En consola ejecutamos el comando yarn, si no se tiene yarn debemos instalarlo desde la pagina (https://yarnpkg.com/).
 
